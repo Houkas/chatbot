@@ -5,17 +5,29 @@
 <script>
     var body = document.getElementsByTagName("body")[0]
     var chatBot = document.createElement("div")
+    var filMessage = document.createElement("div")
+    var barreUser = document.createElement("div")
     var txt = document.createElement("textarea")
     var button = document.createElement("button")
     
-    
-
     chatBot.classList.add("chatBot")
     chatBot.setAttribute("id","chatBot")
-    button.innerHTML = "Envoyer"
 
-    chatBot.appendChild(txt)
-    chatBot.appendChild(button)
+    filMessage.classList.add("filMessage")
+    filMessage.setAttribute("id","filMessage")
+
+    barreUser.classList.add("barreUser")
+    barreUser.setAttribute("id","barreUser")
+
+    button.innerHTML = "Envoyer"
+    
+
     body.appendChild(chatBot)
+    chatBot.appendChild(filMessage)
+    chatBot.appendChild(barreUser)
+    barreUser.appendChild(txt)
+    barreUser.appendChild(button)
+    
+    
     
 </script><script async="" src="./HOTLINE MIAMI_files/analytics.js.téléchargement"></script><script id="__NEXT_DATA__" type="application/json">{"dataManager":"[]","props":{"pageProps":{}},"page":"/","query":{},"buildId":"tv4wXuALsC85z6YeWhAEf","dynamicBuildId":false}</script><script async="" id="__NEXT_PAGE__/" src="./HOTLINE MIAMI_files/index.js.téléchargement"></script><script async="" id="__NEXT_PAGE__/_app" src="./HOTLINE MIAMI_files/_app.js.téléchargement"></script><script src="./HOTLINE MIAMI_files/webpack-3df6523e264ff2ac6548.js.téléchargement" async=""></script><script src="./HOTLINE MIAMI_files/commons.cbe311a780a025f83487.js.téléchargement" async=""></script><script src="./HOTLINE MIAMI_files/main-06c8860c0ccdfcab6176.js.téléchargement" async=""></script></body></html>
