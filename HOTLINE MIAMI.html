@@ -27,7 +27,7 @@
     barreUser.setAttribute("id","barreUser")
 
     txt.setAttribute("id", "txt")
-
+    
     //Création du btn et de sa fonction
     button.innerHTML = "Envoyer"
     button.addEventListener("click", msgEnvoye)
@@ -101,10 +101,15 @@
             document.getElementById("filMessage").innerHTML += "<p>1 2 1 2 TEST MICRO</p><br>"
         }
 
+        // Réponse du bot si il n'a pas compris
         else if (!content.includes(bot)){
             document.getElementById("filMessage").innerHTML += "<p>Je n'ai pas compris votre phrase. Je suis programmé pour répondre à ces questions :</p>" +  "-"+bot[2]+"<br>"+  "-"+bot[3]+"<br>"+  "-"+bot[5]+"<br>"+  "-"+bot[16]+"<br>"
             
         }
+
+        // Enregistrement en local des messages (sur le navigateur)
+        save_messages = filMessage.value
+        localStorage.setItem("messages",save_messages)
        
     }
     
