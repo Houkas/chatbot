@@ -44,8 +44,9 @@
     function msgEnvoye(){
 
         // tableau des réponses que le bot va devoir traiter
-        var bot = ['Bonjour','Bonsoir',
-        'Qui es-tu',
+        var bot = ['Bonjour',
+        'Bonsoir',
+        'Qui es-tu ?',
         'Que fais-tu ?',
         'Au revoir',
         'Pouvez-vous m\'aider ?',
@@ -54,11 +55,14 @@
         'Hello','Hi',
         'Good morning',
         'Good afternoon',
-        'Who are you',
+        'Who are you ?',
         'What are you doing ?', 
         'Can I have help ?',
         'Can you help me ?',
-        'I want buy your product']
+        'I want buy your product',
+
+        'Quel est le prix du produit ?',
+        'test']
 
         // variable qui prend la valeur du textarea
         var content = document.querySelector("textarea").value
@@ -72,9 +76,36 @@
             document.getElementById("filMessage").innerHTML += "<p>Bonjour, comment puis-je vous aider ?</p><br>"
         }
         // Salutation EN
-        if (content.includes(bot[6])||content.includes(bot[7])||content.includes(bot[8])||content.includes(bot[9])){ 
-            document.getElementById("filMessage").innerHTML += "<p>Hello, how can we help you ?</p><br>"
+        else if (content.includes(bot[7])||content.includes(bot[8])||content.includes(bot[9])||content.includes(bot[10])){ 
+            document.getElementById("filMessage").innerHTML += "<p>Hello, how can we help you ? :)</p><br>"
         }
+        // Question sur l'identité du bot FR
+        else if (content.includes(bot[2])||content.includes(bot[3])){ 
+            document.getElementById("filMessage").innerHTML += "<p>Je suis un Bot créé pour répondre à vos questions.</p><br>"
+        }
+        // Question sur l'identité du bot EN
+        else if (content.includes(bot[11])||content.includes(bot[12])){ 
+            document.getElementById("filMessage").innerHTML += "<p>I'm a bot created to answer your questions.</p><br>"
+        }
+        // Question sur l'identité du bot EN
+        else if (content.includes(bot[11])||content.includes(bot[12])){ 
+            document.getElementById("filMessage").innerHTML += "<p>I'm a bot created to answer your questions.</p><br>"
+        }
+        // HELP
+        else if (content.includes(bot[5])){ 
+            document.getElementById("filMessage").innerHTML += "<p>Que recherchez-vous ?</p><br>"
+        }
+
+        // Question sur l'identité du bot EN
+        else if (content.includes(bot[17])){ 
+            document.getElementById("filMessage").innerHTML += "<p>1 2 1 2 TEST MICRO</p><br>"
+        }
+
+        else if (!content.includes(bot)){
+            document.getElementById("filMessage").innerHTML += "<p>Je n'ai pas compris votre phrase. Je suis programmé pour répondre à ces questions :</p>" +  "-"+bot[2]+"<br>"+  "-"+bot[3]+"<br>"+  "-"+bot[5]+"<br>"+  "-"+bot[16]+"<br>"
+            
+        }
+       
     }
     
     
