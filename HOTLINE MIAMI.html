@@ -43,14 +43,38 @@
     //Function du btn envoyer
     function msgEnvoye(){
 
-        var bot = ['Bonjour','Qui es-tu','Que fais-tu ?','Au revoir']
+        // tableau des réponses que le bot va devoir traiter
+        var bot = ['Bonjour','Bonsoir',
+        'Qui es-tu',
+        'Que fais-tu ?',
+        'Au revoir',
+        'Pouvez-vous m\'aider ?',
+        'Je souhaiterai acheter',
 
+        'Hello','Hi',
+        'Good morning',
+        'Good afternoon',
+        'Who are you',
+        'What are you doing ?', 
+        'Can I have help ?',
+        'Can you help me ?',
+        'I want buy your product']
+
+        // variable qui prend la valeur du textarea
         var content = document.querySelector("textarea").value
         
-        document.getElementById("filMessage").innerHTML += "<p>" +content+"</p><br>"
+        //Si le bouton envoyé est cliqué alors afficher dans filMessage le contenu de textarea
+        document.getElementById("filMessage").innerHTML += "<br><p>" +content+"</p><br>"
         txt.value = ''
-
         
+        // Salutation FR
+        if (content.includes(bot[0])||content.includes(bot[1])){ 
+            document.getElementById("filMessage").innerHTML += "<p>Bonjour, comment puis-je vous aider ?</p><br>"
+        }
+        // Salutation EN
+        if (content.includes(bot[6])||content.includes(bot[7])||content.includes(bot[8])||content.includes(bot[9])){ 
+            document.getElementById("filMessage").innerHTML += "<p>Hello, how can we help you ?</p><br>"
+        }
     }
     
     
